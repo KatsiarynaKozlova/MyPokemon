@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/pokemonNameTextView"
+        android:id="@+id/pokemon_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="64sp"
