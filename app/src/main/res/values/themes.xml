@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.MyPokemon" parent="Base.Theme.MyPokemon" />
+
+    <style name="Button.Orange" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">@color/light_orange</item>
+    </style>
 </resources>
