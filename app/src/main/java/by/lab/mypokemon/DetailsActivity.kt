@@ -26,14 +26,13 @@ class DetailsActivity : AppCompatActivity() {
                 val adapter = ArrayAdapter(this@DetailsActivity, android.R.layout.simple_list_item_1, pokemon.elementalType )
                 binding.pokemonTypeListView.adapter = adapter
             } else {
-              // Pokemon not found
+                Log.e("mainPage", "Pokemon with id not exist")
             }
         } else {
-            //Invalid id
+            Log.e("mainPage", "Invalid id")
         }
         binding.backBtn.setOnClickListener{
-            val intent = Intent(this@DetailsActivity, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
