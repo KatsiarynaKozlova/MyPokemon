@@ -86,10 +86,11 @@ object PokemonRepository {
             picture = R.drawable.caterpie
         )
     )
+    private val pokemonInfoMap: HashMap<Int, Pokemon> = HashMap(pokemons.associateBy { it.id })
     fun getAllPokemons(): List<Pokemon>{
         return pokemons
     }
     fun getPokemonById(id: Int): Pokemon?{
-        return pokemons.find { it.id == id }
+        return pokemonInfoMap[id]
     }
 }
