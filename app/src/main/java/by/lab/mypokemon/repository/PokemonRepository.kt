@@ -4,7 +4,8 @@ import by.lab.mypokemon.R
 import by.lab.mypokemon.model.Pokemon
 
 object PokemonRepository {
-    private val pokemons: List<Pokemon> = listOf(
+    private val pokemons: HashMap<Int, Pokemon> = hashMapOf(
+        1 to
         Pokemon(
             id = 1,
             name = "Bulbasaur",
@@ -13,6 +14,7 @@ object PokemonRepository {
             elementalType = listOf("Grass","Poison"),
             picture = R.drawable.bulbasaur
         ),
+        2 to
         Pokemon(
             id = 2,
             name = "Ivysaur",
@@ -21,6 +23,7 @@ object PokemonRepository {
             elementalType = listOf("Grass","Poison"),
             picture = R.drawable.ivysaur
         ),
+        3 to
         Pokemon(
             id = 3,
             name = "Venusaur",
@@ -29,6 +32,7 @@ object PokemonRepository {
             elementalType = listOf("Grass","Poison"),
             picture = R.drawable.venusaur
         ),
+        4 to
         Pokemon(
             id = 4,
             name = "Charmander",
@@ -37,6 +41,7 @@ object PokemonRepository {
             elementalType = listOf("Fire"),
             picture = R.drawable.charmander
         ),
+        5 to
         Pokemon(
             id = 5,
             name = "Charmeleon",
@@ -45,6 +50,7 @@ object PokemonRepository {
             elementalType = listOf("Fire"),
             picture = R.drawable.charmeleon
         ),
+        6 to
         Pokemon(
             id = 6,
             name = "Charizard",
@@ -53,6 +59,7 @@ object PokemonRepository {
             elementalType = listOf("Fire","Flying"),
             picture = R.drawable.charizard
         ),
+        7 to
         Pokemon(
             id = 7,
             name = "Squirtle",
@@ -61,6 +68,7 @@ object PokemonRepository {
             elementalType = listOf("Water"),
             picture = R.drawable.squirtle
         ),
+        8 to
         Pokemon(
             id = 8,
             name = "Wartortle",
@@ -69,6 +77,7 @@ object PokemonRepository {
             elementalType = listOf("Water"),
             picture = R.drawable.wartortle
         ),
+        9 to
         Pokemon(
             id = 9,
             name = "Blastoise",
@@ -77,6 +86,7 @@ object PokemonRepository {
             elementalType = listOf("Water"),
             picture = R.drawable.blastoise
         ),
+        10 to
         Pokemon(
             id = 10,
             name = "Caterpie",
@@ -86,11 +96,10 @@ object PokemonRepository {
             picture = R.drawable.caterpie
         )
     )
-    private val pokemonInfoMap: HashMap<Int, Pokemon> = HashMap(pokemons.associateBy { it.id })
-    fun getAllPokemons(): List<Pokemon>{
-        return pokemons
+    fun getAllPokemons(): MutableCollection<Pokemon> {
+        return pokemons.values
     }
     fun getPokemonById(id: Int): Pokemon?{
-        return pokemonInfoMap[id]
+        return pokemons[id]
     }
 }
