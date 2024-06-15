@@ -21,7 +21,7 @@
         />
     <TextView
 
-        android:id="@+id/pokemonNameTextView"
+        android:id="@+id/pokemon_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -43,7 +43,7 @@
         >
 
         <ImageView
-            android:id="@+id/pokemonImageView"
+            android:id="@+id/pokemon_image_view"
             android:layout_width="160dp"
             android:layout_height="match_parent"
             />
@@ -61,7 +61,7 @@
                 android:text="@string/pokemon_weight"/>
 
             <TextView
-                android:id="@+id/pokemonWeightTextView"
+                android:id="@+id/pokemon_weight_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -75,7 +75,7 @@
                 android:text="@string/pokemon_height"/>
 
             <TextView
-                android:id="@+id/pokemonHeightTextView"
+                android:id="@+id/pokemon_height_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -95,7 +95,7 @@
             android:textSize="24sp"
             android:text="@string/pokemon_type"/>
         <ListView
-            android:id="@+id/pokemonTypeListView"
+            android:id="@+id/pokemon_type_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="@color/light_orange"
