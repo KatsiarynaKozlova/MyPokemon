@@ -65,6 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+
                 android:textSize="24sp" />
             <TextView
                 android:layout_width="match_parent"
@@ -93,5 +94,12 @@
             android:padding="8dp"
             android:textSize="24sp"
             android:text="@string/pokemon_type"/>
+        <ListView
+            android:id="@+id/pokemonTypeListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/light_orange"
+            android:dividerHeight="4dp"
+            />
     </LinearLayout>
 </LinearLayout>

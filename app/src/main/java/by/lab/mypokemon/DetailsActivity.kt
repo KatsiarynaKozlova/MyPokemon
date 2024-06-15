@@ -23,7 +23,8 @@ class DetailsActivity : AppCompatActivity() {
                 binding.pokemonNameTextView.text = pokemon.name
                 binding.pokemonWeightTextView.text = pokemon.weight.toString()
                 binding.pokemonHeightTextView.text = pokemon.height.toString()
-              //  binding.pokemonTypeListView
+                val adapter = ArrayAdapter(this@DetailsActivity, android.R.layout.simple_list_item_1, pokemon.elementalType )
+                binding.pokemonTypeListView.adapter = adapter
             } else {
               // Pokemon not found
             }
