@@ -54,7 +54,7 @@ class DetailsActivity : AppCompatActivity() {
                 0,
                 ConstraintLayout.LayoutParams.WRAP_CONTENT
             )
-            layoutParams.setMargins(0, 12, 0,0)
+            layoutParams.setMargins(0, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 12F,resources.displayMetrics).toInt(), 0, 0)
             layoutParams.topToBottom = prevViewId
             layoutParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID
             layoutParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
