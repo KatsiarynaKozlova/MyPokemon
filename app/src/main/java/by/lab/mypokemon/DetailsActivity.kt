@@ -46,7 +46,7 @@ class DetailsActivity : AppCompatActivity() {
         typeList.forEach {
             val textView = TextView(this).apply {
                 text = it
-                setTextSize(TypedValue.COMPLEX_UNIT_SP, 24F)
+                textSize = 24f
                 id = View.generateViewId()
                 setBackgroundColor(ContextCompat.getColor(context, white))
             }
