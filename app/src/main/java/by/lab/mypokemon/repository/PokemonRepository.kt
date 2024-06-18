@@ -96,10 +96,6 @@ object PokemonRepository {
             picture = R.drawable.caterpie
         )
     )
-    fun getAllPokemons(): MutableCollection<Pokemon> {
-        return pokemons.values
-    }
-    fun getPokemonById(id: Int): Pokemon?{
-        return pokemons[id]
-    }
+    fun getAllPokemons() = pokemons.values
+    fun getPokemonById(id: Int) = pokemons[id]
 }
