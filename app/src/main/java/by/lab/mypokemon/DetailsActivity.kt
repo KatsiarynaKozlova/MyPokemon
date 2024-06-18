@@ -35,9 +35,9 @@ class DetailsActivity : AppCompatActivity() {
                 Toast.makeText(this@DetailsActivity, "Unknown error. Try again later", Toast.LENGTH_SHORT).show()
                 finish()
             }
-        }
-        binding.backBtn.setOnClickListener {
-            finish()
+            backBtn.setOnClickListener { 
+                finish()
+            }
         }
     }
 
