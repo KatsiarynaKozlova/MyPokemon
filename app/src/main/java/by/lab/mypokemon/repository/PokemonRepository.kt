@@ -99,7 +99,5 @@ object PokemonRepository {
     fun getAllPokemons(): MutableCollection<Pokemon> {
         return pokemons.values
     }
-    fun getPokemonById(id: Int): Pokemon?{
-        return pokemons[id]
-    }
+    fun getPokemonById(id: Int) = pokemons[id]
 }
