@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import by.lab.mypokemon.databinding.ActivityMainBinding
+import by.lab.mypokemon.recycler.adapter.PokemonListAdapter
+import by.lab.mypokemon.repository.PokemonRepository
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,11 +15,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.pokemonNameTextView.setOnClickListener {
+        val adapter = PokemonListAdapter()
+        adapter.onClick = { pokemon ->
             val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("pokemon_id", 1)/* pokemonId) */
+                putExtra("pokemon_id",  pokemon.id)
             }
             startActivity(intent)
         }
+        adapter.submit(PokemonRepository.getAllPokemons())
+        binding.recycler.adapter = adapter
     }
 }

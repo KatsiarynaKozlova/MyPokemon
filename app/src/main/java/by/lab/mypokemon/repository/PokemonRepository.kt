@@ -96,6 +96,6 @@ object PokemonRepository {
             picture = R.drawable.caterpie
         )
     )
-    fun getAllPokemons() = pokemons.values
+    fun getAllPokemons() = pokemons.values.toList()
     fun getPokemonById(id: Int) = pokemons[id]
 }
