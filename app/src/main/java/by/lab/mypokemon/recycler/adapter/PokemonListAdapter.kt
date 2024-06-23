@@ -2,12 +2,14 @@ package by.lab.mypokemon.recycler.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import by.lab.mypokemon.databinding.ItemPokemonBinding
 import by.lab.mypokemon.model.Pokemon
+import by.lab.mypokemon.recycler.diffutilcallback.PokemonDiffUtilCallback
 import by.lab.mypokemon.recycler.viewholder.PokemonViewHolder
 
-class PokemonListAdapter: RecyclerView.Adapter<PokemonViewHolder>() {
+class PokemonListAdapter : RecyclerView.Adapter<PokemonViewHolder>() {
     private var items = emptyList<Pokemon>()
     var onClick: (Pokemon) -> Unit = {}
 
@@ -17,9 +19,10 @@ class PokemonListAdapter: RecyclerView.Adapter<PokemonViewHolder>() {
         )
     }
 
-    fun submit(newItems: List<Pokemon>){
+    fun submit(newItems: List<Pokemon>) {
+        val diffUtilCallback = PokemonDiffUtilCallback(items, newItems)
         items = newItems
-        notifyDataSetChanged()
+        DiffUtil.calculateDiff(diffUtilCallback).dispatchUpdatesTo(this)
     }
 
     override fun getItemCount() = items.size
