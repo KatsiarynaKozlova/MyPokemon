@@ -8,4 +8,4 @@
     android:background="@color/light_orange"
     android:orientation="vertical"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity" />

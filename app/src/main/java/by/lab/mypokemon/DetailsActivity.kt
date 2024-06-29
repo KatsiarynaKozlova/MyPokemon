@@ -32,10 +32,14 @@ class DetailsActivity : AppCompatActivity() {
                 createTypeListView(it.elementalType)
             } ?: run {
                 Log.e("mainPage", "Pokemon with id not exist")
-                Toast.makeText(this@DetailsActivity, "Unknown error. Try again later", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@DetailsActivity,
+                    "Unknown error. Try again later",
+                    Toast.LENGTH_SHORT
+                ).show()
                 finish()
             }
-            backBtn.setOnClickListener { 
+            backBtn.setOnClickListener {
                 finish()
             }
         }
@@ -54,7 +58,16 @@ class DetailsActivity : AppCompatActivity() {
                 0,
                 ConstraintLayout.LayoutParams.WRAP_CONTENT
             )
-            layoutParams.setMargins(0, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 12F,resources.displayMetrics).toInt(), 0, 0)
+            layoutParams.setMargins(
+                0,
+                TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    12F,
+                    resources.displayMetrics
+                ).toInt(),
+                0,
+                0
+            )
             layoutParams.topToBottom = prevViewId
             layoutParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID
             layoutParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID

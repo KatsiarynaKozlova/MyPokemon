@@ -18,21 +18,21 @@
         android:theme="@style/Button.Orange"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pokemon_name_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:gravity="center"
         android:padding="16dp"
         android:textSize="28sp"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_btn"
-        tools:text="POKEMON NAME"/>
+        tools:text="POKEMON NAME" />
 
     <ImageView
         android:id="@+id/pokemon_image_view"
@@ -49,21 +49,21 @@
         android:id="@+id/weight_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingTop="12dp"
-        android:paddingLeft="12dp"
         android:layout_marginTop="24dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:text="@string/pokemon_weight"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/pokemon_name_text_view"
-        android:text="@string/pokemon_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name_text_view" />
 
     <TextView
         android:id="@+id/pokemon_weight_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
         android:paddingTop="12dp"
-        android:paddingLeft="12dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -74,9 +74,9 @@
         android:id="@+id/height_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/pokemon_height"
+        android:paddingHorizontal="12dp"
         android:paddingTop="12dp"
-        android:paddingLeft="12dp"
+        android:text="@string/pokemon_height"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -86,25 +86,25 @@
         android:id="@+id/pokemon_height_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="12dp"
         android:paddingTop="12dp"
-        android:paddingLeft="12dp"
         android:textSize="24sp"
-        tools:text="@string/pokemon_height"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/height_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/height_text_view"
+        tools:text="@string/pokemon_height" />
 
     <TextView
         android:id="@+id/type_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:paddingHorizontal="12dp"
+        android:text="@string/pokemon_type"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/pokemon_type"
-        android:layout_marginTop="24dp"
-        android:textSize="24sp"
-        android:paddingLeft="12dp"
-        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/pokemon_height_text_view" />
 
     <androidx.constraintlayout.widget.Guideline
